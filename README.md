@@ -1,4 +1,4 @@
-# quackalias-cli - DuckDuckGo Email Alias Generator and History Tracker
+# GoAlias - DuckDuckGo Email Alias Generator and History Tracker
 
 This project includes scripts to generate DuckDuckGo email aliases and store the history of generated aliases.
 
@@ -35,23 +35,23 @@ From here, follow these steps closely:
 
 ### Installation
 
-1. **Download the script:**
-   Save the script as `ddg.sh` in a directory of your choice.
+1. **Download the binary:**
+   Save the binary as `GoAlias` in a directory of your choice.
+
+2. **Make the binary executable:**
+   ```bash
+   chmod +x GoAlias
+   ```
 
 3. **Set Your DuckDuckGo API Key:**
-   Open `ddg.sh` in a text editor and replace the placeholder API key with your actual key:
+   Run `GoAlias` and replace the placeholder API key with your actual key:
    ```bash
-   API_KEY = "YOUR_API_KEY_HERE"
+   API_KEY = "YOUR_API_KEY_HERE" ./GoAlias
    ```
 
-2. **Make the script executable:**
+4. **Move the binary to a directory in your `$PATH`:**
    ```bash
-   chmod +x ddg.sh
-   ```
-
-3. **Move the script to a directory in your `$PATH`:**
-   ```bash
-   mv ddg.sh /usr/local/bin/ddg
+   mv GoAlias /usr/local/bin/GoAlias
    ```
 
 ### Usage
@@ -60,21 +60,21 @@ From here, follow these steps closely:
 
 To generate a new DuckDuckGo email alias:
 ```bash
-ddg generate
+GoAlias generate
 ```
 
 #### View Alias History
 
 To view the history of generated aliases:
 ```bash
-ddg history
+GoAlias history
 ```
 
 #### Interactive Menu
 
 To use the interactive menu:
 ```bash
-ddg
+GoAlias
 ```
 
 The script will present the following options:
@@ -84,66 +84,6 @@ The script will present the following options:
 ### History File
 
 The history of generated aliases is stored in `~/.local/share/ddg/aliases_history.txt`. Each entry includes the timestamp and the generated email alias.
-
-## For PowerShell
-
-### Installation
-
-1. **Download the script:**
-   Save the script as `ddg.ps1` in a directory of your choice.
-
-2. **Install Required Modules:**
-```powershell
-# Allow script execution
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-
-# Ensure PowerShell can use REST methods
-Install-Module -Name PSReadLine -Scope CurrentUser -Force -SkipPublisherCheck
-```
-
-
-2. **Set Execution Policy:**
-   Ensure that the PowerShell script execution policy allows running scripts:
-   ```powershell
-   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
-   ```
-
-3. **Set Your DuckDuckGo API Key:**
-   Open `ddg.ps1` in a text editor and replace the placeholder API key with your actual key:
-   ```powershell
-   $apiKey = "YOUR_API_KEY_HERE"
-   ```
-
-### Usage
-
-#### Generate an Email Alias
-
-To generate a new DuckDuckGo email alias:
-```powershell
-.\ddg.ps1 -action generate
-```
-
-#### View Alias History
-
-To view the history of generated aliases:
-```powershell
-.\ddg.ps1 -action history
-```
-
-#### Interactive Menu
-
-To use the interactive menu:
-```powershell
-.\ddg.ps1
-```
-
-The script will present the following options:
-1. Generate email alias
-2. Show aliases history
-
-### History File
-
-The history of generated aliases is stored in `C:\Users\YourUsername\.config\ddg\aliases_history.txt`. Each entry includes the timestamp and the generated email alias.
 
 ## License
 
