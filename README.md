@@ -35,21 +35,26 @@ From here, follow these steps closely:
 
 ### Installation
 
-1. **Download the binary:**
+0. **Build the binary:**
+   ```bash
+   go build GoAlias.go
+   ```
+
+2. **Download the binary:**
    Save the binary as `GoAlias` in a directory of your choice.
 
-2. **Make the binary executable:**
+3. **Make the binary executable:**
    ```bash
    chmod +x GoAlias
    ```
 
-3. **Set Your DuckDuckGo API Key:**
+4. **Set Your DuckDuckGo API Key:**
    Run `GoAlias` and replace the placeholder API key with your actual key:
    ```bash
    API_KEY = "YOUR_API_KEY_HERE" ./GoAlias
    ```
 
-4. **Move the binary to a directory in your `$PATH`:**
+5. **Move the binary to a directory in your `$PATH`:**
    ```bash
    mv GoAlias /usr/local/bin/GoAlias
    ```
