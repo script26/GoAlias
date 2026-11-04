@@ -41,7 +41,7 @@ From here, follow these steps closely:
    ```
 
 2. **Or download the binary:**
-   [Download](https://github.com/script26/GoAlias/releases) the binary( as `GoAlias` in a directory of your choice.
+   [Download](https://github.com/script26/GoAlias/releases) the binary as `GoAlias` in a directory of your choice.
 
 4. **Make the binary executable:**
    ```bash
