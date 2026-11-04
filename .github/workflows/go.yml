@@ -28,6 +28,9 @@ jobs:
     - name: Test
       run: go test -v ./main.go
 
+    - name: dir
+      run: ls -la ./
+
     - name: Create GitHub Release and upload APK
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
